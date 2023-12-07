@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animacion antorcha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="llama">
+            <div class="llama1"></div>
+            <div class="llama2"></div>
+            <div class="llama3"></div>
+        </div>
+        <svg>
+            <filter id="fire">
+                <feTurbulence id="turbulence" baseFrequency="0.02 0.02" numOctaves="4" seed="0.1">
+                    <animate attributeName="baseFrequency" dur="10s" values="0.02 0.02; 0.09 0.04" keyTimes="0;1" repeatCount="indefinite"></animate>
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="17"></feDisplacementMap>
+            </filter>
+        </svg>
+        
+
+        <!-- <div class="g-container" id="fireContainer"></div> -->
+        <div class="palo"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
